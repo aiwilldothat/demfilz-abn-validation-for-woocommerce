@@ -1,0 +1,660 @@
+# Copyright (C) 2026 Demfilz
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Demfilz ABN Validation for WooCommerce 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/demfilz-abn-validation-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-17T03:47:17+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: demfilz-abn-validation-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+#: demfilz-abn-validation-for-woocommerce.php
+#: includes/class-dabn-privacy.php:43
+msgid "Demfilz ABN Validation for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: demfilz-abn-validation-for-woocommerce.php
+msgid "https://demfilz.com/abn-validation-for-woocommerce"
+msgstr ""
+
+#. Description of the plugin
+#: demfilz-abn-validation-for-woocommerce.php
+msgid "Adds an ABN field to the WooCommerce checkout, validates it, and looks the business up on the Australian Business Register."
+msgstr ""
+
+#. Author of the plugin
+#: demfilz-abn-validation-for-woocommerce.php
+msgid "Demfilz"
+msgstr ""
+
+#. Author URI of the plugin
+#: demfilz-abn-validation-for-woocommerce.php
+msgid "https://demfilz.com"
+msgstr ""
+
+#: demfilz-abn-validation-for-woocommerce.php:57
+msgid "Demfilz ABN Validation for WooCommerce requires WooCommerce to be installed and active."
+msgstr ""
+
+#: includes/class-dabn-abr.php:84
+msgid "That is not a valid ABN."
+msgstr ""
+
+#: includes/class-dabn-abr.php:87
+msgid "No ABN Lookup GUID is saved, so ABNs are checked for a valid format only."
+msgstr ""
+
+#: includes/class-dabn-abr.php:106
+#: includes/class-dabn-abr.php:154
+#: includes/class-dabn-abr.php:193
+msgid "Too many ABN checks from this address. Please try again later."
+msgstr ""
+
+#: includes/class-dabn-abr.php:148
+msgid "That is not a valid ACN."
+msgstr ""
+
+#: includes/class-dabn-abr.php:151
+#: includes/class-dabn-abr.php:190
+msgid "No ABN Lookup GUID is saved, so nothing can be looked up yet."
+msgstr ""
+
+#: includes/class-dabn-abr.php:187
+msgid "Type at least three characters of the name."
+msgstr ""
+
+#: includes/class-dabn-abr.php:316
+#: includes/class-dabn-abr.php:381
+#: includes/class-dabn-display.php:130
+msgid "The Australian Business Register could not be reached."
+msgstr ""
+
+#: includes/class-dabn-abr.php:407
+msgid "The Australian Business Register sent an empty answer."
+msgstr ""
+
+#: includes/class-dabn-abr.php:427
+msgid "The Australian Business Register answered for a different ABN."
+msgstr ""
+
+#: includes/class-dabn-admin.php:54
+#: includes/class-dabn-settings-page.php:31
+msgid "Settings"
+msgstr ""
+
+#. translators: %s: ABN, for example 51 824 753 556.
+#: includes/class-dabn-admin.php:126
+#: includes/class-dabn-display.php:277
+#, php-format
+msgid "ABN %s"
+msgstr ""
+
+#. translators: %s: legal entity name.
+#: includes/class-dabn-admin.php:131
+#, php-format
+msgid "Entity: %s"
+msgstr ""
+
+#. translators: %s: GST registration, for example "Registered since 1 July 2000".
+#: includes/class-dabn-admin.php:141
+#, php-format
+msgid "GST: %s"
+msgstr ""
+
+#: includes/class-dabn-admin.php:149
+msgid "Add an ABN Lookup GUID in the settings to look ABNs up on the register."
+msgstr ""
+
+#: includes/class-dabn-admin.php:150
+msgid "Lookups are switched off in the settings (\"Check the format only\")."
+msgstr ""
+
+#: includes/class-dabn-admin.php:152
+msgid "The check digits do not add up, so this number cannot be an ABN."
+msgstr ""
+
+#. translators: %s: date and time.
+#: includes/class-dabn-admin.php:166
+#, php-format
+msgid "Checked %s"
+msgstr ""
+
+#: includes/class-dabn-admin.php:169
+#: includes/class-dabn-settings-page.php:269
+msgid "View on ABN Lookup"
+msgstr ""
+
+#: includes/class-dabn-admin.php:205
+#: includes/class-dabn-display.php:173
+#: includes/class-dabn-privacy.php:89
+#: includes/class-dabn-trade-accounts.php:44
+msgid "ABN check"
+msgstr ""
+
+#: includes/class-dabn-admin.php:210
+msgid "The ABN was checked again."
+msgstr ""
+
+#: includes/class-dabn-admin.php:214
+msgid "This ABN has not been checked yet."
+msgstr ""
+
+#: includes/class-dabn-admin.php:215
+msgid "Check now"
+msgstr ""
+
+#: includes/class-dabn-admin.php:220
+msgid "Check again"
+msgstr ""
+
+#: includes/class-dabn-admin.php:236
+#: includes/class-dabn-ajax.php:66
+msgid "You are not allowed to do that."
+msgstr ""
+
+#: includes/class-dabn-admin.php:240
+msgid "That order does not exist."
+msgstr ""
+
+#: includes/class-dabn-admin.php:307
+msgid "Australian Business Number, 11 digits."
+msgstr ""
+
+#: includes/class-dabn-ajax.php:78
+msgid "Type an ABN, an ACN or a business name."
+msgstr ""
+
+#: includes/class-dabn-ajax.php:83
+msgid "That is not a valid ABN: the check digits do not add up."
+msgstr ""
+
+#: includes/class-dabn-ajax.php:90
+msgid "The format is valid: this is a well-formed ABN."
+msgstr ""
+
+#: includes/class-dabn-ajax.php:104
+msgid "That is not a valid ACN: the check digit does not add up."
+msgstr ""
+
+#: includes/class-dabn-ajax.php:119
+msgid "An ABN has 11 digits and an ACN has 9."
+msgstr ""
+
+#: includes/class-dabn-ajax.php:155
+msgid "Not on the Australian Business Register"
+msgstr ""
+
+#: includes/class-dabn-ajax.php:162
+#: includes/class-dabn-privacy.php:60
+#: includes/class-dabn-privacy.php:83
+#: includes/class-dabn-privacy.php:104
+#: includes/class-dabn-settings-page.php:136
+#: includes/class-dabn-settings-page.php:265
+#: includes/class-dabn-settings.php:174
+msgid "ABN"
+msgstr ""
+
+#: includes/class-dabn-ajax.php:163
+msgid "Status"
+msgstr ""
+
+#: includes/class-dabn-ajax.php:165
+msgid "Entity name"
+msgstr ""
+
+#: includes/class-dabn-ajax.php:168
+msgid "Entity type"
+msgstr ""
+
+#: includes/class-dabn-ajax.php:170
+#: includes/class-dabn-settings-page.php:188
+msgid "GST"
+msgstr ""
+
+#: includes/class-dabn-ajax.php:172
+msgid "Main business location"
+msgstr ""
+
+#: includes/class-dabn-ajax.php:175
+msgid "Business names"
+msgstr ""
+
+#: includes/class-dabn-ajax.php:178
+msgid "ACN"
+msgstr ""
+
+#: includes/class-dabn-ajax.php:199
+msgid "No ABN Lookup GUID is saved yet. Add your GUID in the Settings section to look ABNs up on the register."
+msgstr ""
+
+#. translators: %s: message from the Australian Business Register.
+#: includes/class-dabn-ajax.php:203
+#, php-format
+msgid "The Australian Business Register did not accept your GUID: %s"
+msgstr ""
+
+#. translators: %s: message from the Australian Business Register.
+#: includes/class-dabn-ajax.php:203
+msgid "The Australian Business Register did not accept your GUID."
+msgstr ""
+
+#: includes/class-dabn-ajax.php:205
+msgid "Too many lookups in the last hour. Please try again later."
+msgstr ""
+
+#: includes/class-dabn-ajax.php:210
+msgid "The Australian Business Register could not be reached. Please try again in a minute."
+msgstr ""
+
+#. translators: %s: field label, for example ABN.
+#: includes/class-dabn-checkout.php:54
+#, php-format
+msgid "%s (optional)"
+msgstr ""
+
+#. translators: %s: field label, for example ABN.
+#: includes/class-dabn-checkout.php:310
+#, php-format
+msgid "%s is required when you order for a company."
+msgstr ""
+
+#. translators: %s: field label, for example ABN.
+#: includes/class-dabn-checkout.php:313
+#, php-format
+msgid "%s is a required field."
+msgstr ""
+
+#: includes/class-dabn-checkout.php:356
+msgid "Checking the Australian Business Register..."
+msgstr ""
+
+#: includes/class-dabn-checkout.php:357
+#: includes/class-dabn-verify.php:46
+msgid "That is not a valid ABN. Please check the 11 digits."
+msgstr ""
+
+#: includes/class-dabn-checkout.php:358
+msgid "An ABN has 11 digits."
+msgstr ""
+
+#: includes/class-dabn-checkout.php:359
+msgid "This ABN has a valid format."
+msgstr ""
+
+#: includes/class-dabn-display.php:69
+msgid "Active"
+msgstr ""
+
+#: includes/class-dabn-display.php:71
+msgid "Cancelled"
+msgstr ""
+
+#: includes/class-dabn-display.php:73
+msgid "Not on the register"
+msgstr ""
+
+#: includes/class-dabn-display.php:75
+msgid "Not a valid ABN"
+msgstr ""
+
+#: includes/class-dabn-display.php:77
+msgid "Valid format, not looked up"
+msgstr ""
+
+#: includes/class-dabn-display.php:79
+msgid "Not checked"
+msgstr ""
+
+#. translators: 1: status, for example Active. 2: date.
+#: includes/class-dabn-display.php:96
+#, php-format
+msgid "%1$s since %2$s"
+msgstr ""
+
+#: includes/class-dabn-display.php:108
+msgid "Not registered"
+msgstr ""
+
+#. translators: %s: date.
+#: includes/class-dabn-display.php:112
+#, php-format
+msgid "Registered since %s"
+msgstr ""
+
+#. translators: %s: date.
+#: includes/class-dabn-display.php:112
+msgid "Registered"
+msgstr ""
+
+#: includes/class-dabn-display.php:124
+msgid "The Australian Business Register did not accept the store's GUID."
+msgstr ""
+
+#: includes/class-dabn-display.php:126
+msgid "Too many lookups were made in that hour."
+msgstr ""
+
+#: includes/class-dabn-display.php:128
+msgid "No GUID was saved."
+msgstr ""
+
+#: includes/class-dabn-display.php:149
+msgid "registered for GST"
+msgstr ""
+
+#: includes/class-dabn-display.php:149
+msgid "not registered for GST"
+msgstr ""
+
+#: includes/class-dabn-display.php:213
+#: includes/class-dabn-display.php:237
+msgid "Additional information"
+msgstr ""
+
+#. translators: %s: what was typed in the ABN field.
+#: includes/class-dabn-orders.php:449
+#, php-format
+msgid "ABN not changed: \"%s\" is not a number."
+msgstr ""
+
+#. translators: %s: what was typed in the ABN field.
+#: includes/class-dabn-orders.php:451
+#, php-format
+msgid "ABN not saved: \"%s\" is not a number."
+msgstr ""
+
+#: includes/class-dabn-privacy.php:41
+msgid "Suggested text for stores that ask for an ABN:"
+msgstr ""
+
+#: includes/class-dabn-privacy.php:42
+msgid "If you give us an Australian Business Number (ABN) at checkout, we keep it with your order and your account so it can appear on your invoices. To confirm that it is a current ABN, we send the number to the Australian Business Register (ABN Lookup), a service of the Australian Government, and keep the business name, entity type, GST registration status, state and postcode it returns with your order. The register receives the ABN only; it does not receive your name, your address or anything about your order."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:20
+msgid "ABN Validation"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:32
+msgid "Lookup tool"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:65
+msgid "No GUID is saved. ABNs are checked for a valid format only: a mistyped or made-up number is refused, but a cancelled ABN is not noticed."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:69
+msgid "Your GUID works, but lookups are switched off: \"When an ABN is entered\" is set to check the format only."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:71
+msgid "Connected to the Australian Business Register. ABNs are looked up as customers enter them."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:74
+msgid "The Australian Business Register did not accept this GUID. Check that it matches the one in your registration email. Until it is fixed, ABNs are checked for a valid format only and orders are not held up."
+msgstr ""
+
+#. translators: %s: message from the Australian Business Register.
+#: includes/class-dabn-settings-page.php:77
+#, php-format
+msgid "The register said: %s"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:81
+msgid "The Australian Business Register could not be reached just now. The checkout keeps working: ABNs are checked for a valid format and orders are marked \"not checked\" until the register answers again."
+msgstr ""
+
+#. translators: %s: link to the ABN Lookup web services registration page.
+#: includes/class-dabn-settings-page.php:94
+#, php-format
+msgid "To look ABNs up, the Australian Business Register needs to know who is asking. Registration is free: %s, accept the web services agreement, and the register emails you a GUID (a code like 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d). Paste it below."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:95
+msgid "register for ABN Lookup web services"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:100
+msgid "Checkout field"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:102
+msgid "The ABN field appears in the checkout block under the email address, and in the classic checkout after Company. Customers can also change their ABN in My Account > Account details."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:106
+msgid "ABN field"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:112
+msgid "Optional"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:113
+msgid "Required when a company name is given"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:114
+msgid "Required"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:115
+msgid "Do not ask for an ABN"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:117
+msgid "\"Required when a company name is given\" suits stores with both trade and retail customers: people who fill in Company must give an ABN, everyone else can leave it empty."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:120
+msgid "Ask"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:126
+msgid "Customers with an Australian billing address"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:127
+msgid "All customers"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:129
+msgid "For other billing countries the field is hidden and nothing is checked."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:132
+msgid "Label"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:139
+msgid "Company name"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:140
+msgid "Fill an empty Company field with the business name the register returns (needs a GUID)"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:146
+msgid "Billing address"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:147
+msgid "Add the ABN as the last line of the order's billing address"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:151
+msgid "The address is what order emails and most PDF invoice and packing slip plugins print, so this puts the buyer's ABN on those documents."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:158
+msgid "Australian Business Register"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:164
+msgid "ABN Lookup GUID"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:169
+msgid "Kept on your server. It is never sent to your customers' browsers."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:176
+msgid "When an ABN is entered"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:181
+msgid "Look it up, and refuse ABNs that are cancelled or not on the register"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:182
+msgid "Look it up and keep the answer with the order, but refuse nothing"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:183
+msgid "Check the format only (no lookup)"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:185
+msgid "An ABN with the wrong check digits is always refused. If the register cannot be reached, the order goes through and is marked \"not checked\"."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:189
+msgid "Treat an ABN that is not registered for GST like a cancelled one"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:195
+msgid "Keep answers for"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:196
+msgid "hours, before the same ABN is looked up again"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:212
+msgid "Data"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:217
+msgid "Uninstall"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:218
+msgid "Delete these settings when the plugin is deleted (ABNs on orders and customer accounts are always kept)"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:260
+msgid "Asking the Australian Business Register..."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:261
+msgid "The lookup could not be completed. Please try again."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:262
+msgid "No names like that were found."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:263
+msgid "Closest matches. Choose one to see its record."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:264
+msgid "Name"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:266
+msgid "Location"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:267
+msgid "Match"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:268
+msgid "Details"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:270
+msgid "The register holds no ABN with this number."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:276
+msgid "Look up an ABN"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:277
+msgid "Type an ABN (11 digits), an ACN (9 digits) or part of a business name. The answer comes straight from the Australian Business Register and is not saved anywhere."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:281
+msgid "No GUID is saved yet, so only the format of an ABN or ACN can be checked here."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:282
+msgid "Add your GUID in the settings"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:287
+msgid "ABN, ACN or business name"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:288
+msgid "51 824 753 556"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:289
+msgid "Look up"
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:328
+msgid "That does not look like an ABN Lookup GUID, so it was not saved. A GUID has 32 letters and digits in five groups, like 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d."
+msgstr ""
+
+#: includes/class-dabn-settings-page.php:330
+msgid "The GUID you had before is still in place."
+msgstr ""
+
+#: includes/class-dabn-verify.php:71
+msgid "We could not check this ABN right now. You can still place your order."
+msgstr ""
+
+#: includes/class-dabn-verify.php:85
+msgid "We could not find this ABN on the Australian Business Register. Please check the number."
+msgstr ""
+
+#: includes/class-dabn-verify.php:96
+msgid "This ABN is cancelled on the Australian Business Register. Please check the number."
+msgstr ""
+
+#: includes/class-dabn-verify.php:108
+msgid "This ABN is not registered for GST."
+msgstr ""
+
+#. translators: %s: business name from the register.
+#: includes/class-dabn-verify.php:118
+#, php-format
+msgid "%s. Active ABN, registered for GST."
+msgstr ""
+
+#. translators: %s: business name from the register.
+#: includes/class-dabn-verify.php:120
+#, php-format
+msgid "%s. Active ABN, not registered for GST."
+msgstr ""
+
+#: includes/class-dabn-verify.php:123
+msgid "Active ABN, registered for GST."
+msgstr ""
+
+#: includes/class-dabn-verify.php:124
+msgid "Active ABN, not registered for GST."
+msgstr ""

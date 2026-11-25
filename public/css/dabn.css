@@ -1,0 +1,44 @@
+/* Demfilz ABN Validation: the status line under the ABN field at checkout. */
+
+.dabn-status {
+	display: block;
+	margin: 6px 0 0;
+	font-size: 0.875em;
+	line-height: 1.45;
+	color: var(--dabn-note, #50575e);
+	overflow-wrap: anywhere;
+}
+
+.dabn-status:empty {
+	display: none;
+}
+
+.dabn-status--ok {
+	color: var(--dabn-ok, #0a6b2d);
+}
+
+.dabn-status--bad {
+	color: var(--dabn-bad, #b32d2e);
+}
+
+.dabn-status--ok::before,
+.dabn-status--bad::before {
+	display: inline-block;
+	width: 1.1em;
+	font-weight: 700;
+}
+
+.dabn-status--ok::before {
+	content: "\2713";
+}
+
+.dabn-status--bad::before {
+	content: "!";
+}
+
+/* Checkout block: the fields sit in a wrapping flex row, so the line takes a full row of its own. */
+.wc-block-components-text-input + .dabn-status {
+	flex: 1 0 100%;
+	width: 100%;
+	margin: 6px 0 0;
+}

@@ -1,0 +1,165 @@
+/* Demfilz ABN Validation: order panel, lookup tool and settings notices. */
+
+.dabn-check {
+	margin: 0 0 8px;
+	padding: 8px 10px;
+	border: 1px solid #dcdcde;
+	border-left-width: 4px;
+	border-radius: 2px;
+	background: #fff;
+	color: #1d2327;
+	max-width: 520px;
+}
+
+.dabn-check--ok {
+	border-left-color: #00a32a;
+}
+
+.dabn-check--bad {
+	border-left-color: #d63638;
+}
+
+.dabn-check--idle {
+	border-left-color: #8c8f94;
+}
+
+.dabn-check__head {
+	margin: 0 0 4px;
+	font-size: 13px;
+	line-height: 1.5;
+	overflow-wrap: anywhere;
+}
+
+.dabn-check__dot {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	margin-right: 6px;
+	border-radius: 50%;
+	background: #8c8f94;
+	vertical-align: baseline;
+}
+
+.dabn-check--ok .dabn-check__dot {
+	background: #00a32a;
+}
+
+.dabn-check--bad .dabn-check__dot {
+	background: #d63638;
+}
+
+.dabn-check__name {
+	margin-left: 4px;
+}
+
+.dabn-check__list {
+	margin: 0 0 4px;
+	padding: 0;
+	list-style: none;
+}
+
+.dabn-check__list li {
+	margin: 0;
+	line-height: 1.5;
+	color: #3c434a;
+	overflow-wrap: anywhere;
+}
+
+.dabn-check__meta {
+	margin: 4px 0 0;
+	color: #646970;
+	font-size: 12px;
+}
+
+/* Order screen. */
+.dabn-order-box {
+	clear: both;
+	margin-top: 12px;
+	padding-top: 10px;
+	border-top: 1px solid #f0f0f1;
+}
+
+.dabn-order-box__title {
+	margin: 0 0 6px;
+}
+
+.dabn-order-box .notice {
+	margin: 0 0 8px;
+}
+
+/* Settings tab. */
+.dabn-notice {
+	margin: 10px 0;
+	max-width: 760px;
+}
+
+/* Lookup tool: it has nothing to save, so WooCommerce's Save changes button is hidden on this section. */
+.dabn-tool ~ p.submit {
+	display: none;
+}
+
+.dabn-tool__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+.dabn-tool__row .regular-text {
+	max-width: 100%;
+}
+
+.dabn-tool__row .spinner {
+	float: none;
+	margin: 0;
+}
+
+.dabn-tool__result {
+	max-width: 760px;
+	min-height: 24px;
+}
+
+.dabn-tool__card {
+	max-width: 760px;
+	padding: 12px 14px;
+}
+
+.dabn-tool__card .dabn-check__head {
+	font-size: 14px;
+}
+
+.dabn-tool__table {
+	width: 100%;
+	margin: 6px 0 0;
+	border-collapse: collapse;
+}
+
+.dabn-tool__table th,
+.dabn-tool__table td {
+	padding: 5px 10px 5px 0;
+	text-align: left;
+	vertical-align: top;
+	border-top: 1px solid #f0f0f1;
+	overflow-wrap: anywhere;
+}
+
+.dabn-tool__table th {
+	width: 190px;
+	color: #50575e;
+	font-weight: 600;
+}
+
+.dabn-tool__names {
+	margin-top: 6px;
+}
+
+@media screen and (max-width: 600px) {
+	.dabn-tool__table th {
+		width: 40%;
+	}
+
+	.dabn-tool__names {
+		display: block;
+		overflow-x: auto;
+	}
+}

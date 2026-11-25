@@ -3,7 +3,7 @@ Contributors: demfilz
 Tags: abn, abn lookup, australia, gst, b2b
 Requires at least: 6.3
 Tested up to: 7.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -160,6 +160,9 @@ They stay on your orders and customer accounts. Cached register answers are dele
 
 == Changelog ==
 
+= 1.0.2 =
+* Fixed: with WooCommerce 11.3 the ABN of an order from the classic checkout was printed twice, on the order pages and in emails. WooCommerce now prints it for these orders itself, and the plugin leaves it to WooCommerce where it does.
+
 = 1.0.1 =
 * Renamed to Demfilz ABN Validation for WooCommerce. ABN Lookup is the name of the Australian Business Register's own service, which this plugin is not part of. The plugin folder and the text domain changed with the name. Settings, orders and customer data are untouched.
 
@@ -167,6 +170,9 @@ They stay on your orders and customer accounts. Cached register answers are dele
 * First release.
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+No data changes. Stops the ABN being printed twice on classic checkout orders with WooCommerce 11.3.
 
 = 1.0.1 =
 New name: Demfilz ABN Validation for WooCommerce. If you installed 1.0.0 from demfilz.com, deactivate and delete that copy before you activate this one. The ABNs on your orders and customers are kept.

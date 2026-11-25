@@ -30,8 +30,8 @@ class DABN_Display {
 	public function register() {
 		add_action( 'woocommerce_email_order_meta', array( $this, 'admin_email_line' ), 20, 3 );
 
-		// WooCommerce prints the checkout block's field only for orders placed through the block. Orders from
-		// the classic checkout, the admin or the REST API get the same lines from here.
+		// WooCommerce prints the checkout block's field for orders placed through the block and, in newer
+		// versions, for every other order too. Orders it does not print it for get the same lines from here.
 		add_action( 'woocommerce_email_customer_details', array( $this, 'email_abn' ), 31, 3 );
 		add_action( 'woocommerce_order_details_after_customer_details', array( $this, 'order_details_abn' ), 11 );
 		add_action( 'woocommerce_thankyou', array( $this, 'thankyou_abn' ), 20 );
@@ -181,16 +181,46 @@ class DABN_Display {
 	}
 
 	/**
+	 * Whether WooCommerce prints the field for this order by itself.
+	 *
+	 * Older versions did so only for orders created through the Store API (the checkout block), newer ones
+	 * do it for every order that holds a value, so WooCommerce is asked instead of guessing from its version.
+	 *
+	 * @param WC_Order $order Order.
+	 * @return bool
+	 */
+	private static function printed_by_woocommerce( $order ) {
+		if ( 'store-api' === $order->get_created_via() ) {
+			return true;
+		}
+		$service = '\Automattic\WooCommerce\Blocks\Domain\Services\CheckoutFields';
+		if ( ! class_exists( '\Automattic\WooCommerce\Blocks\Package' ) || ! method_exists( $service, 'get_order_additional_fields_with_values' ) ) {
+			return false;
+		}
+		try {
+			$fields = \Automattic\WooCommerce\Blocks\Package::container()->get( \Automattic\WooCommerce\Blocks\Domain\Services\CheckoutFields::class );
+			foreach ( array( 'contact', 'order' ) as $location ) {
+				$values = $fields->get_order_additional_fields_with_values( $order, $location, 'other', 'view' );
+				if ( is_array( $values ) && isset( $values[ DABN_Orders::FIELD_ID ] ) ) {
+					return true;
+				}
+			}
+		} catch ( Throwable $e ) {
+			return false;
+		}
+		return false;
+	}
+
+	/**
 	 * The ABN of an order that WooCommerce will not print by itself, formatted; empty otherwise.
 	 *
-	 * WooCommerce prints the field for orders created through the Store API (the checkout block). With
-	 * the ABN in the billing address it is printed there instead, for every order.
+	 * With the ABN in the billing address it is printed there instead, for every order.
 	 *
 	 * @param WC_Order $order Order.
 	 * @return string
 	 */
 	private static function abn_to_print( $order ) {
-		if ( ! $order instanceof WC_Order || DABN_Settings::on( 'address_line' ) || 'store-api' === $order->get_created_via() ) {
+		if ( ! $order instanceof WC_Order || DABN_Settings::on( 'address_line' ) || self::printed_by_woocommerce( $order ) ) {
 			return '';
 		}
 		$abn = DABN_Orders::get_abn( $order );

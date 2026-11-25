@@ -3,7 +3,7 @@
  * Plugin Name:       Demfilz ABN Validation for WooCommerce
  * Plugin URI:        https://demfilz.com/abn-validation-for-woocommerce
  * Description:       Adds an ABN field to the WooCommerce checkout, validates it, and looks the business up on the Australian Business Register.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Requires at least: 6.3
  * Requires PHP:      7.4
  * Requires Plugins:  woocommerce
@@ -13,14 +13,14 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       demfilz-abn-validation-for-woocommerce
  * WC requires at least: 9.9
- * WC tested up to:   11.0
+ * WC tested up to:   11.3
  *
  * @package DemfilzAbnValidation
  */
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'DABN_VERSION', '1.0.1' );
+define( 'DABN_VERSION', '1.0.2' );
 define( 'DABN_FILE', __FILE__ );
 define( 'DABN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'DABN_URL', plugin_dir_url( __FILE__ ) );
